@@ -5,13 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DAD3D3"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/txtTittle_main"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="43dp"
         android:layout_gravity="center"
         android:layout_marginTop="45dp"
         android:layout_marginBottom="20dp"
@@ -26,6 +26,8 @@
         android:id="@+id/btnRegistrarPac2"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="20dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/mainTheme_btn"
@@ -35,6 +37,8 @@
         android:id="@+id/btnRegistrarVisita"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="22dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/mainTheme_btn"
@@ -46,6 +50,8 @@
         android:layout_height="157dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="22dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:text="@string/txtView_datos_pac"
         android:textColor="#455A64" />
 
@@ -53,6 +59,8 @@
         android:id="@+id/btnEnviarCorreo"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="12dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/mainTheme_btn"

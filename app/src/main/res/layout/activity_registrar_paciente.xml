@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DAD3D3"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/txtTittle_RegPac"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="45dp"
         android:layout_marginBottom="20dp"
         android:text="@string/tittle_RegisterPac"
@@ -19,115 +19,101 @@
         android:textColor="#11504A"
         android:textColorHighlight="#009688"
         android:textSize="18sp"
-        android:textStyle="bold"  />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="12dp"
         android:hint="@string/names_pac"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="10dp" />
+        android:minHeight="48dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
 
     <EditText
         android:id="@+id/editPersonLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="12dp"
         android:hint="@string/lastname_pac"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="10dp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="177dp" />
+        android:minHeight="48dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_weight="1" />
 
     <EditText
         android:id="@+id/editDNI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="12dp"
         android:hint="DNI"
         android:inputType="number"
-        android:minHeight="48dp"
-        android:paddingStart="10dp"/>
+        android:minHeight="48dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_weight="1" />
 
     <EditText
         android:id="@+id/editPersonAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="12dp"
         android:hint="Dirección"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="10dp" />
+        android:minHeight="48dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_weight="1" />
 
     <EditText
         android:id="@+id/editEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="12dp"
         android:hint="Correo"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:paddingStart="10dp" />
+        android:minHeight="48dp" />
 
-    <LinearLayout
+    <Button
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
-        android:layout_height="229dp"
-        android:orientation="horizontal"
-        android:paddingTop="40dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="464dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:background="@color/mainTheme_btn"
+        android:text="Registrar"
+        />
 
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/secondTheme_btn"
-            android:text="Cancelar" />
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/mainTheme_btn"
-            android:text="Registrar"
-             />
-
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="532dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:background="@color/secondTheme_btn"
+        android:text="Cancelar" />
 
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton3"
         android:layout_width="141dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="12dp"
         android:background="@color/mainTheme_btn"
         android:backgroundTint="@color/mainTheme_btn"
         android:clickable="true"
-        android:textAlignment="center"
         app:srcCompat="?attr/homeAsUpIndicator"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
-</LinearLayout>
+</FrameLayout>
