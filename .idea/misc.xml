@@ -3,12 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programming/IDNP_Lab03/VisitaMedica/app/src/main/res/layout/activity_main.xml" value="0.24592391304347827" />
         <entry key="..\:/Users/ADMIN CAR/AndroidStudioProjects/VisitaMedica/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN CAR/AndroidStudioProjects/VisitaMedica/app/src/main/res/layout/activity_registrar_paciente.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN CAR/AndroidStudioProjects/VisitaMedica/app/src/main/res/layout/activity_registrar_visita.xml" value="0.371875" />
-        <entry key="..\:/Users/valer/Documents/GitHub/VisitaMedica/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/valer/Documents/GitHub/VisitaMedica/app/src/main/res/layout/activity_registrar_paciente.xml" value="0.22" />
-        <entry key="..\:/Users/valer/Documents/GitHub/VisitaMedica/app/src/main/res/layout/activity_registrar_visita.xml" value="0.33" />
       </map>
     </option>
   </component>
