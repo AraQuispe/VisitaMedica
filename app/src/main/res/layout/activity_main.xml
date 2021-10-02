@@ -31,7 +31,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/mainTheme_btn"
-        android:text="@string/txtbtn_registrar_paciente" />
+        android:text="@string/txtbtn_registrar_paciente"
+        android:textColor="@color/white"
+        />
 
     <Button
         android:id="@+id/btnRegistrarVisita"
@@ -42,7 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/mainTheme_btn"
-        android:text="@string/txtbtn_registrar_visita" />
+        android:text="@string/txtbtn_registrar_visita"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/txtDatoPac"
@@ -64,6 +67,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/mainTheme_btn"
-        android:text="@string/txtbtn_enviar_correo" />
+        android:text="@string/txtbtn_enviar_correo"
+        android:textColor="@color/white"
+        />
 
 </LinearLayout>

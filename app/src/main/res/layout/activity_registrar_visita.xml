@@ -79,6 +79,7 @@
         android:layout_marginEnd="64dp"
         android:background="@color/mainTheme_btn"
         android:text="Registrar"
+        android:textColor="@color/white"
         />
         <Button
             android:id="@+id/btnCancel"
@@ -88,7 +89,9 @@
             android:layout_marginStart="64dp"
             android:layout_marginEnd="64dp"
             android:background="@color/secondTheme_btn"
-            android:text="Cancelar" />
+            android:text="Cancelar"
+
+            />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton3"
