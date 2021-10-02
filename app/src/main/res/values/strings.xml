@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VisitaMedica</string>
+    <string name="tittle_main">BIENVENIDO - CONTROL</string>
+    <string name="tittle_RegisterPac">REGISTRAR PACIENTE</string>
+    <string name="names_pac">Nombres</string>
+    <string name="lastname_pac">Apellidos</string>
+    <string name="txtbtn_registrar_paciente">Registrar Paciente</string>
+    <string name="txtbtn_registrar_visita">Registrar Visita</string>
+    <string name="txtView_datos_pac">Detalles</string>
+    <string name="txtbtn_enviar_correo">Enviar Correo</string>
+    <string name="txtTittle_registerVisit">REGISTRAR VISITA</string>
+</resources>
