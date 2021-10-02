@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_SUBJECT, asunto);
                 intent.putExtra(Intent.EXTRA_TEXT, mensaje);
                 intent.setType("message/rfc822");
-                startActivity(Intent.createChooser(intent,"Choose Mail App"));
+                startActivity(Intent.createChooser(intent,"Elija una aplicación de correo"));
             }
         });
 
