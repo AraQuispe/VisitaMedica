@@ -30,7 +30,7 @@
         android:layout_marginEnd="64dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/mainTheme_btn"
+        android:background="@color/purple_200"
         android:text="@string/txtbtn_registrar_paciente"
         android:textColor="@color/white"
         />
