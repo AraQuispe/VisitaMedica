@@ -94,7 +94,7 @@
             />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/btnregresar"
         android:layout_width="141dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
