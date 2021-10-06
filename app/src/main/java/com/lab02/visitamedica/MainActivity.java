@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonSendEmail = (Button) findViewById(R.id.btnEnviarCorreo);
 
+        String valoresCorreo   = getIntent().getStringExtra("valoresVisita");
         buttonSendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{destino});
                 intent.putExtra(Intent.EXTRA_SUBJECT, asunto);
-                intent.putExtra(Intent.EXTRA_TEXT, mensaje);
+                intent.putExtra(Intent.EXTRA_TEXT, valoresCorreo);
                 intent.setType("message/rfc822");
 
                 startActivity(Intent.createChooser(intent,"Elija una aplicación de correo"));
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         mostrarDatosPacientes.setText("Nombres: "+nombres+"\nApellidos: "+apellidos+"\nDNI: "+dni+"\nDirección: "+direccion+"\nCorreo: "+correo);
 
-        String valoresCorreo   = getIntent().getStringExtra("valoresVisita");
+
         btnregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
