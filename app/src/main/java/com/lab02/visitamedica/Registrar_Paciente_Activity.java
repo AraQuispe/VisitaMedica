@@ -1,5 +1,6 @@
 package com.lab02.visitamedica;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -39,7 +40,8 @@ public class Registrar_Paciente_Activity extends AppCompatActivity {
                 i.putExtra("direccion",direccion.getText().toString());
                 i.putExtra("correo",correo.getText().toString());
 
-                startActivity(i);
+                setResult(1, i);
+                finish();
 
             }
         });
@@ -61,5 +63,3 @@ public class Registrar_Paciente_Activity extends AppCompatActivity {
     }
 
 }
-
-

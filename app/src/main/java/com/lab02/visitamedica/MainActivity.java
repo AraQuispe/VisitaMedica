@@ -15,6 +15,13 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonSendEmail, btnregistrar, btnRegistrarVisita;
     private TextView mostrarDatosPacientes;
 
+    String nombres  ;
+    String apellidos;
+    String dni    ;
+    String direccion;
+    String correo;
+
+    String valoresCorreo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +30,17 @@ public class MainActivity extends AppCompatActivity {
 
         buttonSendEmail = (Button) findViewById(R.id.btnEnviarCorreo);
 
-        String valoresCorreo   = getIntent().getStringExtra("valoresVisita");
         buttonSendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String destino  = "";
-                String asunto   = "";
-                String mensaje  = "";
+                String destino  = correo;
+                String asunto   = "Laboratorio 03";
+                String mensaje  = valoresCorreo;
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{destino});
                 intent.putExtra(Intent.EXTRA_SUBJECT, asunto);
-                intent.putExtra(Intent.EXTRA_TEXT, valoresCorreo);
+                intent.putExtra(Intent.EXTRA_TEXT, mensaje);
                 intent.setType("message/rfc822");
 
                 startActivity(Intent.createChooser(intent,"Elija una aplicación de correo"));
@@ -45,22 +51,11 @@ public class MainActivity extends AppCompatActivity {
         mostrarDatosPacientes   = (TextView)findViewById (R.id.txtDatoPac);
         btnregistrar       = (Button) findViewById(R.id.btnRegistrarPac2);
 
-        String nombres   = getIntent().getStringExtra("nombres");
-        String apellidos    = getIntent().getStringExtra("apellidos");
-        String dni          = getIntent().getStringExtra("dni");
-        String direccion    = getIntent().getStringExtra("direccion");
-        String correo       = getIntent().getStringExtra("correo");
-
-
-        mostrarDatosPacientes.setText("Nombres: "+nombres+"\nApellidos: "+apellidos+"\nDNI: "+dni+"\nDirección: "+direccion+"\nCorreo: "+correo);
-
-
         btnregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i    = new Intent(MainActivity.this,Registrar_Paciente_Activity.class);
-
-                startActivity(i);
+                startActivityForResult(i, 1);
             }
         });
 
@@ -71,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 if(dni!=null) {
                     Intent i = new Intent(MainActivity.this, Registrar_Visita_Activity.class);
                     i.putExtra("dni",dni);
-                    startActivity(i);
+                    startActivityForResult(i, 2);
+
                 }else{
                     Toast.makeText(getApplicationContext(), "No existe DNI. Registre paciente.", Toast.LENGTH_LONG).show();
                 }
@@ -80,4 +76,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1) {
+            nombres   = data.getStringExtra("nombres");
+            apellidos    = data.getStringExtra("apellidos");
+            dni          = data.getStringExtra("dni");
+            direccion    = data.getStringExtra("direccion");
+            correo       = data.getStringExtra("correo");
+            mostrarDatosPacientes.setText("Nombres: "+nombres+"\nApellidos: "+apellidos+"\nDNI: "+dni+"\nDirección: "+direccion+"\nCorreo: "+correo);
+        }
+        if(requestCode == 2){
+            valoresCorreo = data.getStringExtra("valoresVisita");
+        }
+
+    }
 }

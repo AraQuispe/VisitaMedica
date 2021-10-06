@@ -93,19 +93,6 @@
 
             />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnregresar"
-        android:layout_width="141dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="24dp"
-        android:layout_marginStart="12dp"
-        android:background="@color/mainTheme_btn"
-        android:backgroundTint="@color/mainTheme_btn"
-        android:clickable="true"
-        app:srcCompat="?attr/homeAsUpIndicator"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <TextView
         android:id="@+id/textViewDNI"
         android:layout_width="match_parent"

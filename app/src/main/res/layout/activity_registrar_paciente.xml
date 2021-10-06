@@ -106,18 +106,4 @@
         android:text="Cancelar" />
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnregresar"
-        android:layout_width="141dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="24dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/mainTheme_btn"
-        android:clickable="true"
-        app:srcCompat="?attr/homeAsUpIndicator"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-
 </FrameLayout>

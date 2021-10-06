@@ -1,5 +1,6 @@
 package com.lab02.visitamedica;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class Registrar_Visita_Activity extends AppCompatActivity {
     private EditText editWeight,editTemperature,editPresion,editSaturación;
     private ArrayList<String> arrayList= new ArrayList<String>();
     Button btnRegister,btnCancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,22 +35,23 @@ public class Registrar_Visita_Activity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    arrayList.add( "NUEVO REGISTRO\n"+"Su peso: "+editWeight.getText().toString()+  "\n"+
-                                  "Su temperatura: "+editTemperature.getText().toString()+   "\n"+
-                                  "Su Presion: "+ editPresion.getText().toString()+ "\n"+
-                                  "Su saturación"+ editSaturación.getText().toString()+ "\n");
-                    Log.d("Array",arrayList.toString());
+                arrayList.add( "REGISTRO\n"+"Su peso: "+editWeight.getText().toString()+  "\n"+
+                        "Su temperatura: "+editTemperature.getText().toString()+   "\n"+
+                        "Su Presion: "+ editPresion.getText().toString()+ "\n"+
+                        "Su saturación"+ editSaturación.getText().toString()+ "\n");
+                Log.d("Array",arrayList.toString());
             }
 
         });
+
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i    = new Intent(Registrar_Visita_Activity.this,MainActivity.class);
                 i.putExtra("valoresVisita",arrayList.toString());
-                startActivity(i);
+                setResult(Activity.RESULT_OK, i);
+                finish();
             }
-
         });
     }
 }
