@@ -24,16 +24,15 @@
 
     <Button
         android:id="@+id/btnRegistrarPac2"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/mainTheme_btn"
         android:text="@string/txtbtn_registrar_paciente"
-        android:textColor="@color/white"
-        />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnRegistrarVisita"

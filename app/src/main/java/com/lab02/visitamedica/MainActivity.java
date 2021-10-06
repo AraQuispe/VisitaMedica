@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonSendEmail, btnregistrar;
+    private Button buttonSendEmail, btnregistrar, btnRegistrarVisita;
     private TextView mostrarDatosPacientes;
 
 
@@ -49,9 +50,10 @@ public class MainActivity extends AppCompatActivity {
         String direccion    = getIntent().getStringExtra("direccion");
         String correo       = getIntent().getStringExtra("correo");
 
+
         mostrarDatosPacientes.setText("Nombres: "+nombres+"\nApellidos: "+apellidos+"\nDNI: "+dni+"\nDirección: "+direccion+"\nCorreo: "+correo);
 
-
+        String valoresCorreo   = getIntent().getStringExtra("valoresVisita");
         btnregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +63,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnRegistrarVisita = (Button) findViewById(R.id.btnRegistrarVisita);
+        btnRegistrarVisita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(dni!=null) {
+                    Intent i = new Intent(MainActivity.this, Registrar_Visita_Activity.class);
+                    i.putExtra("dni",dni);
+                    startActivity(i);
+                }else{
+                    Toast.makeText(getApplicationContext(), "No existe DNI. Registre paciente.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
     }
 
